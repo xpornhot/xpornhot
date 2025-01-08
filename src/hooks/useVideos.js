@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
+// Volta para a URL relativa já que estamos usando o proxy da Vercel
 const API_BASE_URL = '/api/videos_api.php';
 const ACCESS_CODE = 'c448a9332b03fe22';
 const VIDEOS_PER_PAGE = 20;
