@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /watch/*
+Allow: /categories/*
+Allow: /search
+
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://seu-dominio.com/sitemap.xml 

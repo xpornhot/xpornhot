@@ -1,0 +1,60 @@
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.video-card.skeleton {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumbnail-skeleton {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.duration-skeleton {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 40px;
+  height: 20px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.info-skeleton {
+  padding: 1rem;
+}
+
+.title-skeleton {
+  height: 20px;
+  width: 90%;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.meta-skeleton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.views-skeleton,
+.date-skeleton {
+  height: 16px;
+  width: 30%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+} 

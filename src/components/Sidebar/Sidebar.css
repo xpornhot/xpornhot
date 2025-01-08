@@ -1,0 +1,243 @@
+.sidebar {
+  width: 240px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.sidebar-section {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-section h3 {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sort-options,
+.duration-options,
+.category-options {
+  list-style: none;
+  padding: 0;
+}
+
+.sort-options li,
+.duration-options li,
+.category-options li {
+  margin-bottom: 0.3rem;
+}
+
+.sort-options button,
+.duration-options button,
+.category-options a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.sort-options button:hover,
+.duration-options button:hover,
+.category-options a:hover,
+.sort-options button.active {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.sort-options button.active {
+  color: var(--primary-color);
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.sort-options i,
+.duration-options i,
+.category-options i {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  opacity: 0.8;
+  width: 16px;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 85%;
+    max-width: 360px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    background: rgba(15, 15, 15, 0.98);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .sidebar.open {
+    left: 0;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .sidebar-section {
+    margin-bottom: 2rem;
+  }
+
+  .sidebar-section h3 {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sort-options button,
+  .duration-options button,
+  .category-options a {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .sort-options button:active,
+  .duration-options button:active,
+  .category-options a:active {
+    transform: scale(0.98);
+  }
+
+  .sort-options button:hover,
+  .duration-options button:hover,
+  .category-options a:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .sort-options button.active {
+    background: var(--primary-color);
+    color: white;
+  }
+
+  .sort-options i,
+  .duration-options i,
+  .category-options i {
+    font-size: 1rem;
+    width: 24px;
+    opacity: 1;
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1001;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-toggle:active {
+    transform: scale(0.95);
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Melhorias para telas muito pequenas */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .sort-options button,
+  .duration-options button,
+  .category-options a {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .sidebar-section h3 {
+    font-size: 0.9rem;
+  }
+
+  .sidebar-toggle {
+    bottom: 1rem;
+    left: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 

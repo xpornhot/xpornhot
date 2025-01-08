@@ -1,0 +1,61 @@
+User-agent: *
+Allow: /
+Allow: /videos/*
+Allow: /search
+Allow: /categories/*
+Allow: /tags/*
+Allow: /stars/*
+Allow: /sitemap.xml
+Allow: /manifest.json
+
+Disallow: /admin/*
+Disallow: /private/*
+Disallow: /api/*
+Disallow: /login
+Disallow: /signup
+Disallow: /password-reset
+Disallow: /*?*query=
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*/print$
+Disallow: /*/print/
+Disallow: /*?print=*
+Disallow: /*&print=*
+Disallow: /*?*print=*
+
+# Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://xpornhot.com.br/sitemap.xml
+Sitemap: https://xpornhot.com.br/video-sitemap.xml
+Sitemap: https://xpornhot.com.br/category-sitemap.xml
+Sitemap: https://xpornhot.com.br/tag-sitemap.xml
+
+# Block bad bots
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+# Allow good bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: / 

@@ -1,0 +1,58 @@
+.watch-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.watch-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-content {
+  min-width: 0; /* Importante para evitar overflow */
+}
+
+.video-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.related-section {
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.loading-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+  color: var(--text-secondary);
+}
+
+.loading-animation i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 1200px) {
+  .watch-page {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .watch-page {
+    padding: 0;
+  }
+  
+  .video-player-container {
+    border-radius: 0;
+  }
+} 
